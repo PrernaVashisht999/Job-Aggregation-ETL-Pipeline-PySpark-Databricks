@@ -1,70 +1,68 @@
-# Job_Aggregator_ETL_Pipeline 🚀
+# Job Aggregation ETL Pipeline using PySpark and Databricks
 
-📊 Architecture Diagram:
+## Project Overview
 
-The architecture diagram for this project is included in this repository (architecture_diagram.drawio). It visualizes the end-to-end ETL workflow and shows how raw job data flows through the Bronze → Silver → Gold layers (Medallion Architecture) to produce clean, structured datasets and insights.
+Built an end-to-end ETL pipeline in Databricks to ingest and process 100+ job listings from SerpApi using PySpark. The project follows a 3-layer Medallion Architecture to transform raw API data into structured datasets for hiring role, company, and location insights.
 
-Project Overview ✨
+## Architecture Diagram
 
-This project is a fully functional ETL pipeline that collects job postings from Google Jobs via SerpApi, processes the data using PySpark on Databricks, and generates actionable insights on top hiring companies, trending roles, and in-demand skills.
-It demonstrates a production-ready ETL workflow using Databricks’ medallion architecture, efficiently handling semi-structured API data and producing clean outputs for analysis.
+The architecture diagram is included in this repository as a `.drawio` file. It shows how raw job data flows through Bronze, Silver, and Gold layers.
 
-👉 Tech Stack 🛠️
+## Tech Stack
 
-• Databricks
+* Python
+* PySpark
+* Apache Spark
+* Spark SQL
+* Databricks
+* SerpApi
+* Google Jobs API
+* Draw.io
 
-• Apache Spark
+## Data Processing Workflow
 
-• PySpark
+1. Ingested job listing data from SerpApi
+2. Loaded raw API response data into the Bronze layer
+3. Converted semi-structured API data into structured format
+4. Applied deduplication, null handling, and schema standardization in the Silver layer
+5. Created Gold-layer datasets for hiring role, company, and location insights
 
-• Spark SQL
+## Medallion Architecture
 
-• Python (Pandas, Requests)
+### Bronze Layer
 
-• SerpApi / Google Jobs API
+* Stored raw job listing data from SerpApi
+* Preserved original API response structure for initial ingestion
 
+### Silver Layer
 
-👉 Approach / Methodology (Medallion Layers) 🏗️
+* Cleaned and standardized semi-structured job data
+* Applied deduplication and null handling
+* Standardized fields such as job title, company, location, and skills
 
+### Gold Layer
 
-1️⃣ Bronze Layer – Data Collection
+* Created structured datasets for reporting-style insights
+* Generated outputs for top hiring roles, companies, and locations
 
-• Fetched raw job listings via SerpApi (Google Jobs API)
+## Key Outcomes
 
-• Stored raw JSON responses in the Bronze layer
+* Processed 100+ job listings from SerpApi
+* Reduced null and duplicate records by ~10% during Silver-layer cleaning
+* Designed a 3-layer Medallion Architecture using Bronze, Silver, and Gold layers
+* Converted semi-structured API data into clean, structured datasets
 
-2️⃣ Silver Layer – Data Transformation & Cleaning
+## Skills Demonstrated
 
-• Converted JSON into Pandas DataFrames, then Spark DataFrames
-
-• Cleaned nulls, duplicates, and normalized columns (job title, company, location, skills)
-
-• Stored clean and standardized data in the Silver layer
-
-3️⃣ Gold Layer – Aggregated Insights
-
-• Aggregated data for analysis: job counts, top companies, locations, and trending skills
-
-• Produced structured datasets for reporting and business insights
-
-4️⃣ Exploratory Data Analysis (EDA) 🔍
-
-• Analyzed top hiring companies, locations, and job categories
-
-• Identified trending skills and roles Fetched raw job listings via SerpApi (Google Jobs API)
-
-• Stored raw JSON responses in the Bronze layer
-
-
-👉 Key Insights / Conclusion 💡
+* API-based data ingestion
+* PySpark transformations
+* Spark SQL processing
+* Semi-structured data handling
+* Data cleaning and validation
+* Schema standardization
+* Medallion Architecture
+* ETL pipeline development
+* Databricks workflow execution
 
 
-• Dominant Roles: Data and tech jobs dominate postings
-
-• Trending Skills: Python, SQL, Cloud Computing, and Big Data technologies
-
-• Top Hiring Companies & Locations: Certain companies and regions have high recruitment activity
-
-• Pipeline Efficiency: Medallion layers ensure systematic processing from raw data to actionable insights
-
-✅ This project demonstrates API integration, PySpark transformations, Databricks workflow design, and a full ETL pipeline for job market analysis.
+ 
