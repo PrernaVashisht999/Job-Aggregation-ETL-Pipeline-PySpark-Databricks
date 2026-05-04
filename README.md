@@ -25,7 +25,7 @@ The architecture diagram is included in this repository as a `.drawio` file. It 
 2. Loaded raw API response data into the Bronze layer
 3. Converted semi-structured API data into structured format
 4. Applied deduplication, null handling, and schema standardization in the Silver layer
-5. Created Gold-layer datasets for hiring role, company, and location insights
+5. Created Gold-layer datasets for hiring roles, companies, and location insights.
 
 ## Medallion Architecture
 
