@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Built an end-to-end ETL pipeline in Databricks to ingest and process 100+ job listings from SerpApi using PySpark. The project follows a 3-layer Medallion Architecture to transform raw API data into structured datasets for hiring role, company, and location insights.
+Built an end-to-end ETL pipeline in Databricks to ingest and process 100+ job listings from SerpApi using PySpark. The project follows a 3-layer Medallion Architecture to transform raw API data into structured datasets for hiring roles, companies, and location insights.
 
 ## Architecture Diagram
 
